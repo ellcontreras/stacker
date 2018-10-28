@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>
+    Create new question
+  </mat-card-title>
+  <mat-card-content>
+    <mat-form-field class="full-width">
+      <input matInput type="text" 
+        placeholder="question title" [(ngModel)]="question.title" #title="ngModel">
+    </mat-form-field>
+    
+    <mat-form-field class="full-width">
+      <textarea matInput placeholder="describe your question"
+        [(ngModel)]="question.description"></textarea>
+    </mat-form-field>    
+  </mat-card-content>
+  <button (click)="handleClickButton()" mat-raised-button color="primary">Create</button>
+</mat-card>
